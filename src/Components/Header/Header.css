@@ -1,0 +1,40 @@
+/*
+    #222831
+    #393E46
+    #FFD369
+    #EEEEEE
+*/
+
+.header-root {
+    /* El fondo y la sombra se manejan mejor con el prop 'sx' o el 'styled' de MUI para sobreescribir el componente base */
+    /* Aquí solo agregamos un padding responsive que es más fácil de manejar con CSS puro */
+    padding: 0.5rem 1rem;
+}
+
+.header_donut{
+    height: 70px;
+}
+.header_logo{
+    height: 60px;
+}
+
+@media (min-width: 900px) {
+    .header-root {
+        padding: 0.5rem 3rem;
+    }
+}
+
+/* --- Navegación (Desktop) --- */
+.nav-button-desktop {
+    color: #333333;
+    font-weight: 600;
+    margin: 0 8px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+}
+
+
+.nav-button-desktop:hover {
+    background-color: #5d9ee9;
+    color: #FFFFFF;
+}

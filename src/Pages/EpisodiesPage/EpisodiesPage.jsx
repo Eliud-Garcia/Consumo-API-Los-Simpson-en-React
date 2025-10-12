@@ -35,9 +35,9 @@ const EpisodiesPages = () => {
 
   return (
     <div className="episodies-container">
-      <h1 className="episodies-title">Episodes</h1>
+      <h1 className="episodies-title">Episodios</h1>
       <p className="episodies-subtitle">
-        Discover the funniest and most iconic moments of The Simpsons.
+        Descubre los momentos más divertidos e icónicos de Los Simpson.
       </p>
 
       {loading ? (

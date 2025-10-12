@@ -102,11 +102,11 @@ const Header = () => {
                         alt=""
                         className='header_donut'
                     />
-                    <img
+                    {/* <img
                         src="https://upload.wikimedia.org/wikipedia/commons/b/b7/The_logo_simpsons_yellow.png"
                         alt=""
                         className='header_logo'
-                    />
+                    /> */}
                 </Typography>
 
                 {/* Enlaces de Navegación (Desktop) */}

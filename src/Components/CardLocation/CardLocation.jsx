@@ -17,21 +17,28 @@ const CardLocation = ({ data }) => {
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'space-between',
+                alignItems: 'center',
                 height: '100%', // asegura igual altura
+                borderRadius: '16px'
             }}
         >
             <CardMedia
                 component="img"
                 alt={data.name}
                 image={url + data.image_path}
-                sx={{ height: 190, objectFit: 'contain' }}
+                sx={{
+                    objectFit: 'contain',
+                    width: '90%',
+                    borderRadius: '16px',
+                    margin: '5%',
+                }}
             />
 
             <CardContent sx={{ flexGrow: 1 }}>
-                <Typography gutterBottom variant="h5" component="div" sx={{ mt: 'auto' }}>
+                <Typography gutterBottom variant="h5" component="div" sx={{ mt: 'auto', fontWeight: '700'}} className='title-card'>
                     {data.name}
                 </Typography>
-                <Divider/>
+                <Divider />
                 <br />
                 <Typography variant="body2" sx={{ color: 'text.secondary', textAlign: 'start', mt: 'auto' }}>
                     town: {data.town ? data.town : "unknown"}

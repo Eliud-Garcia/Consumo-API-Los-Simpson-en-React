@@ -7,6 +7,7 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
 
+
 const CardEpisodie = ({ data }) => {
     const url = 'https://cdn.thesimpsonsapi.com/500';
 
@@ -17,22 +18,30 @@ const CardEpisodie = ({ data }) => {
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'space-between',
+                alignItems: 'center',
                 height: '100%', // asegura igual altura
+                borderRadius: '16px'
             }}
         >
             <CardMedia
                 component="img"
                 alt={data.name}
                 image={url + data.image_path}
-                sx={{ height: 190, objectFit: 'contain' }}
+                sx={{
+                    objectFit: 'contain', 
+                    width: '90%', 
+                    borderRadius: '16px',
+                    margin: '5%',
+                }}
             />
 
             <CardContent sx={{ flexGrow: 1 }}>
-                <Typography gutterBottom variant="h5" component="div" sx={{ mt: 'auto' }}>
+                <Typography gutterBottom variant="h5" component="div" sx={{ mt: 'auto', fontWeight: '700'}}>
                     {data.name}
                 </Typography>
                 <Divider/>
                 <br />
+
                 <Typography variant="body2" sx={{ color: 'text.secondary', textAlign: 'start', mt: 'auto' }}>
                     📺 season: {data.season ? data.season : "unknown"}
                 </Typography>

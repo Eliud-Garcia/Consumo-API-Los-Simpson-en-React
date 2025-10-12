@@ -35,9 +35,9 @@ const LocationsPage = () => {
 
     return (
         <div className="locations-container">
-            <h1 className="locations-title">Locations</h1>
+            <h1 className="locations-title">Lugares</h1>
             <p className="locations-subtitle">
-                Discover the funniest and most iconic locations of The Simpsons.
+                Descubre los lugares más divertidos e icónicos de Los Simpson.
             </p>
 
             {loading ? (

@@ -35,9 +35,9 @@ const CharactersPage = () => {
 
   return (
     <div className="characters-container">
-      <h1 className="characters-title">Characters</h1>
+      <h1 className="characters-title">Personajes</h1>
       <p className="characters-subtitle">
-        Meet the most beloved and funniest characters from The Simpsons.
+        Conoce a los personajes más queridos y divertidos de Los Simpson.
       </p>
 
       {loading ? (

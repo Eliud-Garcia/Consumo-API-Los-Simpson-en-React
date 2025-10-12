@@ -1,9 +1,3 @@
-/*
-    #222831
-    #393E46
-    #FFD369
-    #EEEEEE
-*/
 
 .header-root {
     /* El fondo y la sombra se manejan mejor con el prop 'sx' o el 'styled' de MUI para sobreescribir el componente base */

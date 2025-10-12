@@ -34,9 +34,9 @@ const CharactersPage = () => {
   };
 
   return (
-    <div className="episodies-container">
-      <h1 className="episodies-title">Characters</h1>
-      <p className="episodies-subtitle">
+    <div className="characters-container">
+      <h1 className="characters-title">Characters</h1>
+      <p className="characters-subtitle">
         Meet the most beloved and funniest characters from The Simpsons.
       </p>
 
@@ -44,7 +44,7 @@ const CharactersPage = () => {
         <p className="loading">Loading characters...</p>
       ) : (
         <>
-          <div className="episodies-grid">
+          <div className="characters-flex">
             {characters.map((character) => (
               <CardCharacter key={character.id} data={character} />
             ))}

@@ -34,9 +34,9 @@ const LocationsPage = () => {
     };
 
     return (
-        <div className="episodies-container">
-            <h1 className="episodies-title">Locations</h1>
-            <p className="episodies-subtitle">
+        <div className="locations-container">
+            <h1 className="locations-title">Locations</h1>
+            <p className="locations-subtitle">
                 Discover the funniest and most iconic locations of The Simpsons.
             </p>
 
@@ -44,7 +44,7 @@ const LocationsPage = () => {
                 <p className="loading">Loading locations...</p>
             ) : (
                 <>
-                    <div className="episodies-grid">
+                    <div className="locations-flex">
                         {locations.map((loc) => (
                             <CardLocation key={loc.id} data={loc} />
                         ))}

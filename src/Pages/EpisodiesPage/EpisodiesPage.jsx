@@ -44,7 +44,7 @@ const EpisodiesPages = () => {
         <p className="loading">Loading episodes...</p>
       ) : (
         <>
-          <div className="episodies-grid">
+          <div className="episodies-flex">
             {episodes.map((ep) => (
               <CardEpisodie key={ep.id} data={ep} />
             ))}

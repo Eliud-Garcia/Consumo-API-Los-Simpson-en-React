@@ -87,8 +87,8 @@ const Header = () => {
                 {/* Logo/Título del Sitio */}
                 <Typography
                     variant="h6"
-                    component="a"
-                    href="/"
+                    component={Link}
+                    to='/'
                     sx={{
                         flexGrow: 1,
                         color: theme.palette.primary.main,

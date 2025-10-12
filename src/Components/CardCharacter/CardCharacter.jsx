@@ -1,35 +1,48 @@
 import * as React from 'react';
 import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
+import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import CardActionArea from '@mui/material/CardActionArea';
+import Divider from '@mui/material/Divider';
 
-const CardCharacter = ({ data }) => {
-    const path_img = "https://cdn.thesimpsonsapi.com/500"
-    
+const CardEpisodie = ({ data }) => {
+    const url = 'https://cdn.thesimpsonsapi.com/500';
+
     return (
-        <Card sx={{ maxWidth: 345 }}>
-            <CardActionArea>
-                <CardMedia
-                    component="img"
-                    height="300"
-                    image={path_img + data.portrait_path}
+        <Card
+            sx={{
+                width: 345,
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'space-between',
+                height: '100%', // asegura igual altura
+            }}
+        >
+            <CardMedia
+                component="img"
+                alt={data.name}
+                image={url + data.portrait_path}
+                sx={{ height: 190, objectFit: 'contain' }}
+            />
 
-                    sx={{ objectFit: 'contain', height: 300 }}
-                />
-                <CardContent>
-                    <Typography gutterBottom variant="h5" component="div">
-                        {data.id ? data.id + ". " : "sin id"}
-                        {data.name}
-                    </Typography>
-                    <Typography variant="body2" sx={{ color: 'text.secondary', overflowY: 'auto', maxHeight: 100, fontSize: 18 }}>
-                        {data.phrases}
-                    </Typography>
-                </CardContent>
-            </CardActionArea>
+            <CardContent sx={{ flexGrow: 1 }}>
+                <Typography gutterBottom variant="h5" component="div" sx={{ mt: 'auto' }}>
+                    {data.name ? data.name : "unknown"}
+                </Typography>
+                <Divider/>
+                <br />
+                <Typography variant="body2" sx={{ color: 'text.secondary', textAlign: 'start', mt: 'auto' }}>
+                    {"ocuppation: "}
+                    {data.occupation ? data.occupation : "unknown"}
+                </Typography>
+            </CardContent>
+            <CardActions >
+                <Button size="small">Learn More</Button>
+            </CardActions>
         </Card>
     );
-}
+};
 
-export default CardCharacter
+export default CardEpisodie;

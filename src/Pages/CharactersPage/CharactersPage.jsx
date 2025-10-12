@@ -1,21 +1,21 @@
 import { useEffect, useState } from 'react';
-import CardEpisodie from '../../Components/CardEpisodie/CardEpisodie';
+import CardCharacter from '../../Components/CardCharacter/CardCharacter';
 import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
-import './EpisodiesPage.css';
+import './CharactersPage.css';
 
-const EpisodiesPages = () => {
-  const [episodes, setEpisodes] = useState([]);
+const CharactersPage = () => {
+  const [characters, setCharacters] = useState([]);
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
   const [loading, setLoading] = useState(true);
 
-  const fetchEpisodes = async (pageNum) => {
+  const fetchCharacters = async (pageNum) => {
     setLoading(true);
     try {
-      const response = await fetch(`https://thesimpsonsapi.com/api/episodes?page=${pageNum}`);
+      const response = await fetch(`https://thesimpsonsapi.com/api/characters?page=${pageNum}`);
       const data = await response.json();
-      setEpisodes(data.results);
+      setCharacters(data.results);
       setTotalPages(data.pages);
     } catch (error) {
       console.log(error);
@@ -25,7 +25,7 @@ const EpisodiesPages = () => {
   };
 
   useEffect(() => {
-    fetchEpisodes(page);
+    fetchCharacters(page);
   }, [page]);
 
   const handleChange = (event, value) => {
@@ -35,18 +35,18 @@ const EpisodiesPages = () => {
 
   return (
     <div className="episodies-container">
-      <h1 className="episodies-title">Episodes</h1>
+      <h1 className="episodies-title">Characters</h1>
       <p className="episodies-subtitle">
-        Discover the funniest and most iconic moments of The Simpsons.
+        Meet the most beloved and funniest characters from The Simpsons.
       </p>
 
       {loading ? (
-        <p className="loading">Loading episodes...</p>
+        <p className="loading">Loading characters...</p>
       ) : (
         <>
           <div className="episodies-grid">
-            {episodes.map((ep) => (
-              <CardEpisodie key={ep.id} data={ep} />
+            {characters.map((character) => (
+              <CardCharacter key={character.id} data={character} />
             ))}
           </div>
 
@@ -78,4 +78,4 @@ const EpisodiesPages = () => {
   );
 };
 
-export default EpisodiesPages;
+export default CharactersPage;

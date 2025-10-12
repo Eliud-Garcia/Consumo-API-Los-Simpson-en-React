@@ -7,7 +7,7 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
 
-const CardLocation = ({ data }) => {
+const CardEpisodie = ({ data }) => {
     const url = 'https://cdn.thesimpsonsapi.com/500';
 
     return (
@@ -34,15 +34,20 @@ const CardLocation = ({ data }) => {
                 <Divider/>
                 <br />
                 <Typography variant="body2" sx={{ color: 'text.secondary', textAlign: 'start', mt: 'auto' }}>
-                    town: {data.town ? data.town : "unknown"}
+                    📺 season: {data.season ? data.season : "unknown"}
                 </Typography>
 
                 <Typography variant="body2" sx={{ color: 'text.secondary', textAlign: 'start', mt: 'auto' }}>
-                    use: {data.use ? data.use : "unknown"}
+                    🎬 episode: {data.episode_number ? data.episode_number : "unknown"}
                 </Typography>
+
+                <Typography variant="body2" sx={{ color: 'text.secondary', textAlign: 'start', mt: 'auto' }}>
+                    📅 airdate: {data.airdate ? data.airdate : 'unknown'}
+                </Typography>
+                
             </CardContent>
         </Card>
     );
 };
 
-export default CardLocation;
+export default CardEpisodie;

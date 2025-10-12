@@ -1,0 +1,39 @@
+.episodies-container {
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.episodies-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5rem;
+  color: #ffca28;
+  margin-bottom: 8px;
+}
+
+.episodies-subtitle {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 40px;
+  text-align: center;
+  max-width: 600px;
+}
+
+.episodies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.loading {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  color: #555;
+  text-align: center;
+  margin-top: 50px;
+}

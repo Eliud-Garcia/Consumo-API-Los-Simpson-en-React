@@ -4,13 +4,15 @@
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
-
+  /* background: url('https://thesimpsonsapi.com/clouds-bg.jpg'); */
+  background: url('./../../assets/clouds.png');
 }
 
 .episodies-title {
   font-family: 'Poppins', sans-serif;
   font-size: 2.5rem;
   color: #ffca28;
+  -webkit-text-stroke: 1px #e28000;
   margin-bottom: 8px;
 }
 

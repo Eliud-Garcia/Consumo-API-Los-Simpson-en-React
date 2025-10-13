@@ -4,12 +4,16 @@
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
+  background: url('./../../assets/clouds.png');
+  /* background-color: #fff; */
+
 }
 
 .characters-title {
   font-family: 'Poppins', sans-serif;
   font-size: 2.5rem;
   color: #ffca28;
+  -webkit-text-stroke: 1px #c77100;
   margin-bottom: 8px;
 }
 

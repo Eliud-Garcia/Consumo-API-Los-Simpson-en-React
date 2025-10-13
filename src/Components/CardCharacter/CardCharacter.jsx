@@ -7,6 +7,10 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
 
+
+
+import { Link } from 'react-router-dom';
+
 const CardEpisodie = ({ data }) => {
     const url = 'https://cdn.thesimpsonsapi.com/500';
 
@@ -19,7 +23,8 @@ const CardEpisodie = ({ data }) => {
                 justifyContent: 'space-between',
                 alignItems: 'center',
                 height: '100%', // asegura igual altura
-                borderRadius: '16px'
+                borderRadius: '16px',
+                boxShadow: 'black'
             }}
         >
             <CardMedia
@@ -31,6 +36,9 @@ const CardEpisodie = ({ data }) => {
                     width: '90%',
                     borderRadius: '16px',
                     margin: '5%',
+                    background: 'linear-gradient(180deg, #35a6fdff 0%, #9de2ffff 100%)',
+                    boxShadow: '1px black'
+                    // background: 'linear-gradient(180deg, #fdd835ff 0%, #fff79dff 100%)',
                 }}
             />
 
@@ -46,7 +54,11 @@ const CardEpisodie = ({ data }) => {
                 </Typography>
             </CardContent>
             <CardActions >
-                <Button size="small">Learn More</Button>
+                <Button 
+                    size="small"
+                    component={Link}
+                    to={`/Personaje/${data.id}`} //
+                >Learn More</Button>
             </CardActions>
         </Card>
     );

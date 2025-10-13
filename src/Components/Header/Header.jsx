@@ -77,7 +77,7 @@ const Header = () => {
         <AppBar
             position="static"
             sx={{
-                backgroundColor: '#FFFFFF',
+                backgroundColor: '#8AD5FF',
                 boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
             }}
             className="header-root"

@@ -25,28 +25,28 @@ const HomePage = () => {
         <Link to="/Personajes" className="feature-card characters">
           <img
             src="https://cdn.thesimpsonsapi.com/500/character/1.webp"
-            alt="Characters"
+            alt="personajes"
           />
-          <h3>Characters</h3>
-          <p>Meet all your favorite Springfield citizens.</p>
+          <h3>Personajes</h3>
+          <p>Conoce a todos tus ciudadanos favoritos de Springfield.</p>
         </Link>
 
         <Link to="/Episodios" className="feature-card episodes">
           <img
             src="https://cdn.thesimpsonsapi.com/500/episode/1.webp"
-            alt="Episodes"
+            alt="Episodios"
           />
-          <h3>Episodes</h3>
-          <p>Relive the funniest and most iconic moments.</p>
+          <h3>Episodios</h3>
+          <p>Revive los momentos más divertidos e icónicos.</p>
         </Link>
 
         <Link to="/Lugares" className="feature-card locations">
           <img
             src="https://cdn.thesimpsonsapi.com/500/location/5.webp"
-            alt="Locations"
+            alt="lugares"
           />
-          <h3>Locations</h3>
-          <p>Explore the most famous places in Springfield.</p>
+          <h3>Lugares</h3>
+          <p>Explora los lugares más famosos de Springfield.</p>
         </Link>
       </section>
     </main>

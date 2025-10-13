@@ -4,7 +4,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: url('https://thesimpsonsapi.com/clouds-bg.jpg');
+    background: url('./../../assets/clouds.png');
     /* background: linear-gradient(#fdf497, #fdd835); */
     min-height: 100vh;
     color: #222;
@@ -40,6 +40,7 @@
     font-size: 1.8rem;
     margin-top: 1rem;
     color: #ff9800;
+    -webkit-text-stroke: 1px #c77100;
 }
 
 .hero-text {

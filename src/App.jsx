@@ -16,7 +16,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 function App() {
   return (
     <>
-      <Router basename="/ApiSimpsons_2025IIg1_Garcia_Jhonnier/">
+      <Router basename="/Consumo-API-Los-Simpson-en-React/">
         <Header />
         <Routes>
           <Route path='/' element={<HomePage />} />

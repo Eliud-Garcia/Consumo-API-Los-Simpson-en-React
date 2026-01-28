@@ -31,5 +31,6 @@ function App() {
     </>
   )
 }
-
+//npm install
+//npm run dev
 export default App
